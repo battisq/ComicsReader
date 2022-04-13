@@ -14,9 +14,5 @@ class HomeFragment : BaseVMFragment<HomeViewModel>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        requireActivity().findViewById<Button>(R.id.actionButton).setOnClickListener {
-            requireActivity().findViewById<TextView>(R.id.title).text =
-                viewModel.getNumber().toString()
-        }
     }
 }
