@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/titlePreview"
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/titleName"
+        android:layout_width="wrap_content"
+        style="@style/Text.Title"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/titlePreview"
+        app:layout_constraintTop_toTopOf="@id/titlePreview"
+        tools:text="Material Peak" />
+
+    <TextView
+        android:id="@+id/readStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/titleName"
+        app:layout_constraintTop_toBottomOf="@id/titleName"
+        tools:text="3520 / 5200" />
+
+    <Button
+        android:id="@+id/actionButton"
+        style="@style/Button.Action"
+        tools:text="Continue read"
+        app:layout_constraintStart_toStartOf="@id/titleName"
+        app:layout_constraintTop_toBottomOf="@id/readStatus" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

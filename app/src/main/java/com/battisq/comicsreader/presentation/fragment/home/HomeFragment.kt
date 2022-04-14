@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.battisq.comicsreader.R
 import com.battisq.comicsreader.presentation.fragment.base.fragment.BaseVMFragment
+import com.battisq.comicsreader.presentation.fragment.title.list.TitleListFragment
 
 class HomeFragment : BaseVMFragment<HomeViewModel>() {
 
@@ -14,5 +15,10 @@ class HomeFragment : BaseVMFragment<HomeViewModel>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val fragment = TitleListFragment()
+
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, fragment)
+            .commitNow()
     }
 }
